@@ -1,0 +1,7 @@
+{
+  "name": "snoutbook",
+  "workspaces": [
+    "packages/client",
+    "packages/server"
+  ]
+}
