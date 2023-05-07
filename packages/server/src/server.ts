@@ -1,15 +1,16 @@
-import express, { Express, Request, Response, json } from "express";
+import express, { Express, Request, Response, Router, json } from "express";
 import dotenv from "dotenv";
+import cors from "cors";
+
+import { usersController } from "./controllers/users";
 
 dotenv.config();
 
 // Server Setup
 export const server: Express = express();
 
-server.get("/user", function (req: Request, res: Response) {
-  res.status(200).json({ name: "john" });
-});
+// Server Middleware/Helpers
+server.use(json());
+server.use(cors());
 
-server.post("/user", function (req: Request, res: Response) {
-  res.status(201).json({ message: "Success" });
-});
+server.use("/users", usersController);
