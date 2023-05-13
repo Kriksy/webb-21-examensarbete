@@ -2,6 +2,10 @@
   "name": "snoutbook",
   "workspaces": [
     "packages/client",
-    "packages/server"
-  ]
+    "packages/server",
+    "packages/shared"
+  ],
+  "scripts": {
+    "test": "npm run test --workspace=server"
+  }
 }
