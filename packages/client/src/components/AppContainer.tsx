@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { UserContextProvider } from '../context/userContext';
 import Navbar from '../navbar/Navbar'
 import Footer from '../footer/Footer'
 
@@ -10,12 +10,11 @@ interface AppContainerProps {
 export function AppContainer({ children }: AppContainerProps) {
     return (
         <div>
-            <Navbar />
-            {children}
-            <Footer />
+            <UserContextProvider>
+                <Navbar />
+                {children}
+                <Footer />
+            </UserContextProvider>
         </div>
     )
 }
-
-
-
