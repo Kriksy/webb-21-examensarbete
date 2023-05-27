@@ -12,3 +12,6 @@ node_modules
 
 # Typescript #
 dist
+
+# Workspace
+.env
