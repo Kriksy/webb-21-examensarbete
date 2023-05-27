@@ -1,13 +1,14 @@
-import React from 'react'
-import LoginForm from '../../account/LoginForm'
+import LoginForm from './components/LoginForm'
 import { AppContainer } from "../../components/AppContainer"
-
+import { Segment } from 'semantic-ui-react'
 
 export default function LoginPage() {
     return (
         <div>
-            <AppContainer>
-                <LoginForm />
+            <AppContainer header={{ title: "Login", icon: "sign in" }}>
+                    <Segment attached>
+                        <LoginForm />
+                    </Segment>
             </AppContainer>
         </div>
     )

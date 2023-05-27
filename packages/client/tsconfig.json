@@ -18,8 +18,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "composite": true,
+    "paths": {
+      "@snoutbook/shared": ["../shared"]
+    }
   },
+  "references": [{ "path": "../shared" }],
+  "jsx": "react",
   "include": [
     "src"
   ]

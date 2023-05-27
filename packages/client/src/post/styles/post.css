@@ -1,0 +1,25 @@
+.card {
+    /* width: 650px;
+    height: auto; */
+    /* background-color: rgb(150, 240, 172); */
+}
+
+.cardImage {
+            /* width: 350px;
+    height: auto; */
+            /* background-color: rgb(43, 182, 78); */
+}
+
+.cardText {
+        /* width: 450px;
+    height: auto; */
+        /* background-color: rgb(150, 240, 196); */
+    position: relative;
+    right: 1%;
+    bottom: 2%;
+    top: 2%
+}
+.card1 {
+/* background-color: rgb(204, 245, 200); */
+
+}
