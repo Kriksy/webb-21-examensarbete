@@ -10,7 +10,7 @@
     "dev-client": "npm run start -w client",
     "dev-server": "npm run dev -w server",
     "dev": "npm-run-all --parallel dev-client dev-server",
-    "lib": "npm run build -w @snoutbook/shared",
+    "build-lib": "npm run build -w @snoutbook/shared",
     "serve-client": "npm run serve -w client"
   },
   "dependencies": {
