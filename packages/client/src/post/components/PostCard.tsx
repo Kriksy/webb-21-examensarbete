@@ -62,14 +62,10 @@ function AdminPostCardOptions({ postId }: AdminPostCardOptionsProps) {
                     <Icon name="delete" />
                     Approve
                 </Button>
-                <Button color="yellow" onClick={onClickDeny}>
+                <Button color="yellow" onClick={onClickDeny}>§
                     <Icon name="x" />
                     Decline
                 </Button>
-                {/* <Button color="red" onClick={onClickDeny}>
-                    <Icon name="delete" />
-                    Delete
-                </Button> */}
             </Button.Group>
         </Card.Content>
     );
@@ -91,9 +87,6 @@ export default function PostCard({ post, role }: PostCardProps) {
             headers: getAuthHeaders(),
         })
             .then((res) => {
-                //     return res.json()
-                // }).then(res => {
-                //     console.log(res)
             })
             .catch((error) => {
                 console.error(error);
@@ -128,10 +121,6 @@ export default function PostCard({ post, role }: PostCardProps) {
                                         </Comment>
                                     </Comment.Group>
                                     <Card.Meta>Date: {post.createdAt} </Card.Meta>
-                                    {/* <Comment.Metadata>
-                                            I find: <p>{where}</p>
-                                        </Comment.Metadata>
-                                        <br /> */}
                                     { }
                                 </Card.Content>
                                 <Comment.Text>
