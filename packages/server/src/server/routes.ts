@@ -2,7 +2,7 @@ import express, { Router } from "express";
 import multer from "multer";
 import formidable from "express-formidable";
 
-import { authenticate, register } from "../api/auth";
+import { AuthController } from "../api/auth.controller";
 import { verifyToken, verifyAdminRole } from "../api/helpers";
 import { UserController } from "../api/user.controller";
 import { PostController } from "../api/post.controller";
@@ -17,8 +17,8 @@ const postsUploader = multer({ dest: "uploads/posts/" });
 router.use("/uploads/posts", express.static("uploads/posts"));
 router.use("/uploads/images", express.static("uploads/images"));
 
-router.post("/register", register);
-router.post("/authenticate", authenticate);
+router.post("/register", AuthController.register);
+router.post("/authenticate", AuthController.authenticate);
 
 secureRouter.use(verifyToken);
 
@@ -37,8 +37,14 @@ router.use(secureRouter);
 
 adminRouter.use(verifyToken, verifyAdminRole);
 adminRouter.get("/posts", PostController.findAllPostsPendingApproval);
-adminRouter.post("/pending_posts/:postId/approve", PostController.adminApprovePost);
-adminRouter.post("/pending_posts/:postId/deny", PostController.adminDenyApprovalPost);
+adminRouter.post(
+  "/pending_posts/:postId/approve",
+  PostController.adminApprovePost
+);
+adminRouter.post(
+  "/pending_posts/:postId/deny",
+  PostController.adminDenyApprovalPost
+);
 adminRouter.post("/posts/:postId", PostController.updatePost);
 
 router.use("/admin", adminRouter);

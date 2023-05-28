@@ -33,7 +33,7 @@ export default function DevelopersPage() {
                                 <Card.Content extra>
                                     <a>
                                         <Icon icon='email' />
-                                        viktoria.toldi@gmail.com
+                                        developer@gmail.com
                                     </a>
                                 </Card.Content>
                             </Card>

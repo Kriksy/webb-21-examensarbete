@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import parse from 'html-react-parser'
 import { Card, Icon } from 'semantic-ui-react'
-import NavbarHeader from '../components/Navbar'
+import NavbarHeader from '../components/navbar'
 
 const PostDetails = () => {
     const { slug } = useParams()

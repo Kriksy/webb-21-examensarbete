@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Icon, Menu, Header, Button, Grid, Label } from 'semantic-ui-react'
+import { Icon, Menu, Header, Button, Grid } from 'semantic-ui-react'
 
 import UserProfileImage from '../UserProfileImage'
 import NameProfile from '../../profile/NameProfile'
@@ -12,11 +12,11 @@ export default function Navbar() {
 
     const { logout, loggedIn } = useAppContext()
 
-    const handleItemClick = (e: any, { name }: any) => {
+    const handleItemClick = (_e: any, { name }: any) => {
         navigate("/" + name)
     }
 
-    const handleSignOutClick = (e: any, { name }: any) => {
+    const handleSignOutClick = (_e: any, { name }: any) => {
         logout()
         navigate("/home")
     }

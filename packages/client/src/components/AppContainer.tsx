@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Segment, Header, SemanticICONS } from "semantic-ui-react"
 
-import Navbar from './NavBar/Navbar'
+import Navbar from './navbar/Navbar'
 import Footer from './footer/Footer'
 
 interface AppContainerProps {

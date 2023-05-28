@@ -127,7 +127,7 @@ export default function PostCard({ post, role }: PostCardProps) {
                                             </Comment.Content>
                                         </Comment>
                                     </Comment.Group>
-                                    <Card.Meta>Data: {post.createdAt} </Card.Meta>
+                                    <Card.Meta>Date: {post.createdAt} </Card.Meta>
                                     {/* <Comment.Metadata>
                                             I find: <p>{where}</p>
                                         </Comment.Metadata>
