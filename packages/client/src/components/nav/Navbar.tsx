@@ -105,7 +105,6 @@ export default function Navbar() {
                     </Menu.Item>
                 </Menu.Menu>
             </Menu >
-            <div className="navbar"></div>
         </div>
     )
 }

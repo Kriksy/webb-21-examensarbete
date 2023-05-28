@@ -1,6 +1,6 @@
 
 import { useContext, useState, useEffect } from "react"
-import { Container, Segment, Header, Divider, Menu, Label, Icon, Message } from 'semantic-ui-react'
+import { Container, Segment, Icon, Message } from 'semantic-ui-react'
 
 import PostList from '../../post/PostList'
 import PostsMenu from './components/PostsMenu'
@@ -11,21 +11,9 @@ export default function HomePage() {
     const postContext = useContext(AppContext)
     const [state, setState] = useState({ activeItem: "feed" })
 
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [firstLoad, setIsFirstLoad] = useState<boolean>(true);
-
-    // useEffect(() => {
-    //     if (firstLoad) {
-    //         postContext.fetchPosts()
-    //         setIsFirstLoad(false)
-    //         setIsLoading(false)
-    //     }
-    // }, [firstLoad]);
-
     useEffect(() => {
         postContext.fetchPosts()
     }, [state.activeItem]);
-
 
 
     const handleItemClick = (e: any, { name }: any) => {
