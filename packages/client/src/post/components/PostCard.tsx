@@ -120,9 +120,12 @@ export default function PostCard({ post, role }: PostCardProps) {
                                             </Comment.Content>
                                         </Comment>
                                     </Comment.Group>
-                                    <Card.Meta>Date: {post.createdAt} </Card.Meta>
-                                    { }
+                                    {/* <Card.Meta>Date: {post.createdAt} </Card.Meta>
+                                    { } */}
                                 </Card.Content>
+                                <Card.Meta>Date: {
+                                    new Date(Date.parse(post.createdAt as string)).toLocaleDateString('en-GB', { timeZone: 'UTC' })
+                                }</Card.Meta>
                                 <Comment.Text>
                                     Story:<p>{post.text}</p>
                                 </Comment.Text>
