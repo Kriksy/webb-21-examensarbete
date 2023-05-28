@@ -1,5 +1,3 @@
-
-
 import { Container, Segment, Button, Header, Icon, Grid, Popup } from 'semantic-ui-react'
 
 const initAnimals = [
@@ -111,17 +109,9 @@ export default function AnimalCard({ animals = initAnimals }) {
                             </Container>
                             <br />
                             <Container>
-
                                 <Header as='h2' attached='top' className='text-align-center'>
                                     All Post about the {animal.name}
                                 </Header>
-
-                                <Container>
-
-                                    {/* <Post /> */}
-                                    {/* Här behöver söka alla djur som fick den label som den djur namn */}
-                                    {/* Behöver här Post innehål??? */}
-                                </Container>
                             </Container>
                         </div >
                     )
